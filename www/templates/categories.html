@@ -1,0 +1,9 @@
+<div class="panel panel-primary" ng-repeat="categorie in categoriesCtrl.categories">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            {{categorie.Title}}</h3>
+    </div>
+    <ul class="list-group" ng-repeat="child in categorie.Childs">
+        <a href="{{'#' + categoriesCtrl.$location.path() + '/' + child.Title}}" class="list-group-item">{{child.Title}} - </a>
+    </ul>
+</div>
